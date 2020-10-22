@@ -58,14 +58,19 @@ public class PeaksAndValleys
     {
         PeaksAndValleys ob = new PeaksAndValleys();
 
+        long startTime, endTime;
+
         // Sample run of example from the quiz prompt
         int[] arr = {5, 3, 1, 2, 3};
         System.out.println("Unsorted array from quiz prompt:");
         ob.print(arr);
         int arr_length = arr.length;
+        startTime = System.nanoTime();
         ob.sort(arr, arr_length);
+        endTime = System.nanoTime();
         System.out.println("Sorted array from quiz prompt:");
         ob.print(arr);
+        System.out.println("Elapsed time: " + (endTime - startTime) + " ns.");
 
         // Test runs with random values
         int[] arr10 = new int[10];
@@ -79,22 +84,31 @@ public class PeaksAndValleys
         System.out.println("\nUnsorted array of 10 elements:");
         ob.print(arr10);
         int arr10_length = arr10.length;
+        startTime = System.nanoTime();
         ob.sort(arr10, arr10_length);
+        endTime = System.nanoTime();
         System.out.println("\nSorted array of 10 elements:");
         ob.print(arr10);
+        System.out.println("Elapsed time: " + (endTime - startTime) + " ns.");
 
         System.out.println("\nUnsorted array of 50 elements:");
         ob.print(arr50);
         int arr50_length = arr50.length;
+        startTime = System.nanoTime();
         ob.sort(arr50, arr50_length);
+        endTime = System.nanoTime();
         System.out.println("\nSorted array of 50 elements:");
         ob.print(arr50);
+        System.out.println("Elapsed time: " + (endTime - startTime) + " ns.");
 
         System.out.println("\nUnsorted array of 100 elements:");
         ob.print(arr100);
         int arr100_length = arr100.length;
+        startTime = System.nanoTime();
         ob.sort(arr100, arr100_length);
+        endTime = System.nanoTime();
         System.out.println("\nSorted array of 100 elements:");
         ob.print(arr100);
+        System.out.println("Elapsed time: " + (endTime - startTime) + " ns.");
     } // end main
 }
